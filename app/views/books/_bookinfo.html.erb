@@ -10,7 +10,7 @@
 
   <td><%= book.body %></td>
 
-  <td><%= render 'favorite', book: book %> </td>
+  <td class="favorite_for_#{book.id}"><%= render 'favorite', book: book %> </td>
 
   <td>コメント数：<%= book.book_comments.count %></td>
 
