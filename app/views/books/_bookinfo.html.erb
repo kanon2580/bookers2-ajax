@@ -10,7 +10,11 @@
 
   <td><%= book.body %></td>
 
-  <td class="favorite_for_#{book.id}"><%= render 'favorite', book: book %> </td>
+  <td>
+    <div id="favorite_btn">
+      <%= render partial: 'favorites/favorite', locals: {book: @book} %>
+    </div>
+  </td>
 
   <td>コメント数：<%= book.book_comments.count %></td>
 
