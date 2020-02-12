@@ -17,10 +17,7 @@
 			<%= render 'bookinfo', book: @book %>
 		</table>
 
-				<%= form_for [@book, @book_comment] do |f| %>
-					<%= f.text_area :comment %>
-					<%= f.submit %>
-				<% end %>
+		<%= render 'book_comments/newform'%>
 
 		<%= render 'book_comments/comment', {book: @book, book_comments: @book_comments} %>
 
