@@ -19,7 +19,13 @@
 
 		<%= render 'book_comments/newform'%>
 
-		<%= render 'book_comments/comment', {book: @book, book_comments: @book_comments} %>
+		<table class="table">
+			<% @book_comments.each do |book_comment| %>
+				<div id="comments_index">
+					<%= render 'book_comments/comment', {book: @book, book_comment: book_comment} %>
+				</div>
+			<% end %>
+		</table>
 
 	</div>
 </div>

@@ -1,15 +1,11 @@
-<table class="table">
-  <% book_comments.each do |book_comment| %>
-    <tr>
-      <td>
-        <%= book_comment.comment %>
-      <td>
+<tr>
+  <td>
+    <%= book_comment.comment %>
+  <td>
 
-      <td>
-        <% if book_comment.user_id == current_user.id %>
-          <%= link_to "delete", book_book_comment_path(book, book_comment), method: :delete %>
-        <% end %>
-      </td>
-    </tr>
-  <% end %>
-</table>
+  <td>
+    <% if book_comment.user_id == current_user.id %>
+      <%= link_to "delete", book_book_comment_path(book, book_comment), method: :delete %>
+    <% end %>
+  </td>
+</tr>
