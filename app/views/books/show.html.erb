@@ -17,8 +17,12 @@
 			<%= render 'bookinfo', book: @book %>
 		</table>
 
+<%# コメント入力フォーム %>
 		<%= render 'book_comments/newform'%>
 
+
+		<h2>Comments</h2>
+	
 		<table class="table">
 			<% @book_comments.each do |book_comment| %>
 				<div id="comments_index">
